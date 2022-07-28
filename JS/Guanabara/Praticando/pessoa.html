@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        section{
+            background-color: aqua;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Validar Pessoa
+        </h1>
+    </header>
+    <section>
+        <h1>
+            Tabela
+        </h1>
+        Idade: <input type="number" name="idade" id="anoNasc">
+        <br>
+        <br>
+        Sexo: <input type="radio" name="sex" id="masc">Masculino
+        <input type="radio" name="sex" id="fem">Feminino
+        <br>
+        <br>
+        <input type="button" value="Checar" onclick="checar()">
+        <br>
+        <br>
+        <div id="resp">
+            Digite a idade e Selecione o Sexo
+        </div>
+    </section>
+    <script src="javas.js"></script>
+</body>
+</html>
