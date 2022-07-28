@@ -10,17 +10,25 @@ function exibir(){
         sexo: 'M'
     }
 
-    var ano = 1995;
-    var anon = [1998, 1997, 1999];
-
     let carro = {
         marca: ['Ford', 'Chevrolet', 'Volks'],
-        ano: ['1993', ano, anon[2]]
+        ano: ['1993', '1994', '1995']
+    }
+
+    let produtos = {
+        nome: [],
+        preço: []
     }
 
 
 
+    produtos.nome = ['arroz']
+    produtos.preço = ['12.20']
+    produtos.nome = [...produtos.nome, 'feijão']
 
+    carro.marca = [...carro.marca, 'Porsche']
+    carro.ano = [...carro.ano, '2001']
+    
 
 
 
@@ -30,4 +38,5 @@ function exibir(){
 
     mostra.innerHTML = `Exibindo a Marca: ${carro.marca[1]} <br> Exibindo o Ano: ${carro.ano} `
 
+    mostra.innerHTML = `Marca: ${carro.marca} <br> Ano: ${carro.ano}`
 }
