@@ -1,26 +1,33 @@
-let mensagem = 'ola caras'
-let mensagem2 = 'hahaha'
+function exibir(){
 
-document.write(`Essa usa crase ${mensagem}`)
-document.write("<p> Essa usa aspas " + mensagem2 + "</p>")
-
-let produtos = ['Arroz','feijao', 'batata']
-var codigos = Array(10, 20, 30)
-
-document.write(`Lista: ${produtos} `)
-
-produtos.push('pao')
-
-document.write(`<p>Lista: ${produtos} </p>`)
-
-produtos.splice(2,1)
-
-document.write(`<p>Lista: ${produtos} </p>`)
-
-var numE = produtos.length;
-
-document.write(numE)
-
-document.write(`<p>Lista: ${produtos[2]} </p>`)
+    
+    var mostra = window.document.getElementById('mostrar')
 
 
+    var pessoa = {
+        nome: 'andre',
+        idade: 10,
+        sexo: 'M'
+    }
+
+    var ano = 1995;
+    var anon = [1998, 1997, 1999];
+
+    let carro = {
+        marca: ['Ford', 'Chevrolet', 'Volks'],
+        ano: ['1993', ano, anon[2]]
+    }
+
+
+
+
+
+
+
+
+
+
+
+    mostra.innerHTML = `Exibindo a Marca: ${carro.marca[1]} <br> Exibindo o Ano: ${carro.ano} `
+
+}
