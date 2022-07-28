@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do nav</p>
+
+    <picture>
+        <source media="(max-width: 500px)" srcset="imagens/p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/m.png" type="image/png">
+        <img src="imagens/g.png" alt="fotoG">
+    </picture>
+
+    <h1>Reproduzindo Audios</h1>
+        <audio preload="auto" controls loop>
+            <source src="midia/Can You.mp3" type="audio/mpeg">
+        </audio>
+
+    <h1></h1>
+        <video src="blablabla.mp4" type="video/mp4"></video>
+
+        <video width="500" poster="imagem de capa" controls></video>
+        <source src="caminho do video" type="video/mp4">
+
+    <h1>inserindo video do youtube</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/prjiZ2SXFBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+</head>
+<style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-color: aquamarine;
+        text-align: center;
+    }
+    header{
+        background-color: aliceblue;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .central{
+        text-align: center;
+    }
+    article > span:hover{
+        background-color: brown;
+    }
+    nav {
+        background-color: white ;
+    }
+    nav > a:hover{
+        background-color: blueviolet;
+    }
+    
+    footer{
+        background-color: rgba(0, 0, 0, 0.404);
+        padding: 5px;
+        margin: auto;
+    }
+    footer > p {
+        text-align: center;
+    }
+    div#bola{
+        background-color: aliceblue;
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+        border-radius: 50%;
+
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+        <h1>Meu Site</h1>
+    </header>
+    <main>
+        <section id="Assuntos">
+
+        </section>
+        <section id="Noticias">
+            <article>
+                <h2>Noticias dobre o BR</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa necessitatibus rerum qui pariatur voluptate illo, eum harum vitae excepturi cumque nam veniam, veritatis a, quia laudantium eaque nulla placeat at?</p>
+                    <span class="central">Artigo de José</span>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desevolvido por mim</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

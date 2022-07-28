@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+        body{
+            background-color: rgba(253, 255, 128, 0.87);
+            font: normal lighter 1em 'Pacifico';
+        }
+        ul{
+            background-color: rgba(43, 253, 183, 0.466);
+            border-radius: 15px;
+            padding: 10px;
+        }
+        a{
+            color:rgb(199, 12, 127);
+        }
+        a:visited{
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+            color:rgb(199, 12, 127);
+        }
+        .especial:active{
+            color: pink;
+        }
+        .especial::before{
+            content: 'Clica ae--';
+        }
+        a::after{
+            content: '  [LINK]';
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/mendesvinicius7575" target="_blank">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ehQWgKeTYL8">Canal Youtu</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ehQWgKeTYL8" class="especial">Site do curso</a></li>
+    </ul>
+</body>
+</html>
