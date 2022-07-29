@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+
+        }
+        main{
+            background-color: aquamarine;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            padding: 15px;
+        }
+        input#bt1{
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+            padding: 10px 15px ;
+
+        }
+        input#bt2{
+            background: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            padding: 10px 15px ;
+        }
+        img{
+            width: 70%;
+        }
+     
+    </style>
+</head>
+<body>
+    <main>
+        <input type="button" value="Light" name="bt1" id="bt1">
+        <input type="button" value="Dark" name="bt2" id="bt2">
+
+        <h1 id="titulo">Aparece abaixo</h1>
+        <img src="" alt="ceu" id="foto">
+    </main>
+    <script>
+        var troca = document.querySelector('#foto')
+        function trocar(){
+            troca.setAttribute('src', '3344.jpg')
+        }
+        function voltar(){
+            troca.setAttribute('src', '2233.jpg')
+        }
+        var bt1 = document.getElementById('bt1')
+        var bt2 = document.getElementById('bt2')
+        bt1.addEventListener('click',trocar)
+        bt2.addEventListener('click', voltar)
+    </script>
+</body>
+</html>
