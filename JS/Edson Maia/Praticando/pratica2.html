@@ -10,6 +10,9 @@
     <h1>oi</h1>
     <h1>oi2</h1>
     <h1>oi3</h1>
+
+    <h2 id="oi2">5</h2>
+
     <script>
         var oi = document.querySelectorAll('h1')
         oi[1].textContent = 'olaaa'
@@ -17,8 +20,13 @@
         do{
             document.write(oi[x].textContent + "<br>")
             x++
-        }while (x < 3)
+        }while (x < 3);
         
+        var oi2 = document.getElementById('oi2')
+        var oi3 = oi2.textContent
+
+
+        document.write("<br><strong>" + oi3 + "</strong><br>")
     </script>
 </body>
 </html>
