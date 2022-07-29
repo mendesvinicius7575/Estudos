@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo1">ola</h1>
+    <script>
+        function iai(){
+            return 'Vamos estudar poh'
+        }
+        iai()
+        document.write(iai())
+
+        let num1 = 10;
+        let num2 = 20;
+
+        function somar(a,b){
+            return a + b;
+        }
+
+        document.write(`<br>Resultado: ${somar(num1, num2)}` )
+
+        var name = 'Andre'
+        var palavras = ['ola']
+
+        function linkarPalavras(palavra){
+            var novaPalavra = 'Oi amigo '
+            var listaP = [...palavra, novaPalavra]
+            return listaP
+
+        }
+
+        var palavrasNovas = linkarPalavras(palavras)
+        document.write(`<br> ${palavrasNovas.join(" ")}`)
+        document.write(palavrasNovas)
+
+        var titulo1 = document.getElementById('titulo1')
+
+        //titulo1.addEventListener('mouseenter', function(){
+        //    document.write(`iai eu chapa`)
+        //})
+
+        const mostrarFrase = () => document.write(`iiaiaaaa`)
+        mostrarFrase()
+
+        const getRandomNumber = () => Math.random
+
+        document.addEventListener('click', () => console.log(`clicou`))
+    </script>
+</body>
+</html>
