@@ -7,11 +7,11 @@ const server = express();
 server.get('/', async (request, response) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://covid-19.campinas.sp.gov.br/');
+    await page.goto('https://www.tarabrach.com/guided-meditation-basic-meditations/');
 
         const pageContent = await page.evaluate(() => {
         return{
-            subtitle: document.querySelector('.numero').innerHTML
+            subtitle: document.querySelector('.post-content-inner').innerHTML
         };
     });
 
@@ -20,7 +20,7 @@ server.get('/', async (request, response) => {
 
     response.send(
         {
-            "Numero de Casos Covid, de Acordo com o Site de Campinas/SP": pageContent.subtitle
+            "Paragrafo": pageContent.subtitle
     });
 });
 
