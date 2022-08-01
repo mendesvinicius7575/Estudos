@@ -221,7 +221,7 @@ input[type=number], input[type=text] {
         let idade = cxIdade.value
         let peso = cxPeso.value
         let altura = cxAltura.value
-        let imc = (pesdo / (altura * altura)).toFixed(1)
+        let imc = (peso / (altura * altura)).toFixed(1)
 
         cxImc.value = imc
         let sit = situacaoDoPeso(imc)
@@ -237,8 +237,27 @@ input[type=number], input[type=text] {
 
         }
 
+        dados[1].textContent = pessoa.nomeP
+        dados[2].textContent = pessoa.idadeP
+        dados[3].textContent = pessoa.alturaP
+        dados[4].textContent = pessoa.pesoP
+        dados[5].textContent = pessoa.sitP
+
         e.preventDefault()
 })
+
+    function situacaoDoPeso(imc){
+        let situacao = ' ';
+        if(imc < 18.5){
+            situacao = 'Baixo Peso'
+        }else if(imc>= 18.5 && imc <= 24.9){
+            situacao = 'Peso Normal'
+        }else if(imc >=25 && imc <= 70){
+            situacao = 'Acima'
+        }
+        return situacao;
+
+    }
 </script>
 </body>
 </html>
