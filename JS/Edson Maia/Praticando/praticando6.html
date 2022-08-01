@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estrutura FOR</h1>
+    <p id="aqui">Aparece aqui</p>
+    <input type="text" id="text">
+    <input type="button" value="Inserir" id="inserir">
+    <p id="ola">ola</p>
+    <br>
+    <br>
+    <script>
+        let carro = ['ford','arroz']
+
+        for(let i = 0; i < carro.length; i++){
+            var indice = i + 1
+            document.write('Carro ' + indice + ": " + carro[i] + "<br>")
+        }
+
+        carro.forEach(function(car, i){
+            var ind = i + 1
+            document.write(`Carro ${ind}: ${car} <br>`)
+        })
+       
+       
+
+        
+
+        
+
+
+
+       
+    </script>
+</body>
+</html>
