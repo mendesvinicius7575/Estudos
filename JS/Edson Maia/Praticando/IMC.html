@@ -209,6 +209,7 @@ input[type=number], input[type=text] {
     let cxIdade = document.querySelector('#idade')
     let cxPeso = document.querySelector('#peso')
     let cxAltura = document.querySelector('#altura')
+    let cxImc = document.querySelector('#resultadoImc')
 
     let aviso = document.querySelector('#aviso')
     let dados = document.querySelectorAll('.pessoa')
@@ -220,7 +221,23 @@ input[type=number], input[type=text] {
         let idade = cxIdade.value
         let peso = cxPeso.value
         let altura = cxAltura.value
-        let imc = 
+        let imc = (pesdo / (altura * altura)).toFixed(1)
+
+        cxImc.value = imc
+        let sit = situacaoDoPeso(imc)
+        aviso.textContent = sit
+
+        let pessoa = {
+            nomeP: nome,
+            idadeP: idade,
+            pesoP: peso,
+            alturaP: altura,
+            imcP: imc,
+            sitP: sit
+
+        }
+
+        e.preventDefault()
 })
 </script>
 </body>
