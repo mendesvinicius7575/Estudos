@@ -46,12 +46,12 @@
         <form method="POST" action="">
             <h2>Inserir Dados</h2>
             <div class="formulario">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome">
+                <label for="nome">Numero 1:</label>
+                <input type="number" id="num1">
             </div>
             <div class="formulario">
-                <label for="Idade">Idade:</label>
-                <input type="number" id="idade">
+                <label for="Idade">Numero 2:</label>
+                <input type="number" id="num2">
             </div>
             <div>
                 <button type='submit' id="submitar">Enviar</button>
@@ -59,28 +59,22 @@
         </form>
         <div class="mostrar">
             <h2>Informações</h2>
-            <p id="nome" class="infos"></p>
-            <p id="idade" class="infos"></p>
+            <p id="num1" class="infos"></p>
         </div>
     </main>
     <script>
-        let nomeP = document.querySelector('#nome')
-        let idadeP = document.querySelector('#idade')
+        let n1 = document.querySelector('#num1')
+        let n2 = document.querySelector('#num2')
         let btn = document.querySelector('#submitar')
-        let info = document.querySelectorAll('.infos')
+        let info = document.querySelector('.infos')
 
         btn.addEventListener('click', function(e){
 
-        let cxNome = nomeP.value
-        let cxIdade = idadeP.value
+        let num1 = Number(n1.value)
+        let num2 = Number(n2.value)
 
-        let pessoa = {
-            name: cxNome,
-            age: cxIdade
-        }
 
-        info[0].textContent = pessoa.name
-        info[1].textContent = pessoa.age
+        info.textContent = (num1 * num2) / 100
 
         e.preventDefault();
 
