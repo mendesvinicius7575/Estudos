@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    min-height: 100vh;
+    background-color: rgba(210, 105, 30, 0.795);
+}
+
+header{
+
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+section.normal{
+    background-color: aqua;
+}
+section.image{
+    background-color: blueviolet;
+}
