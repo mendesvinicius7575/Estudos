@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Calcular</title>
     <style>
         body{
-            margin: auto;
+        }
+        h1,h2{
             text-align: center;
         }
+        
         form{
-            padding: 15px;
-            background-color: darkgray;
-            width: 500px;
+            padding: 10px;
+            background-color: rgb(211, 211, 211);
+            width: 300px;
             margin: auto;
             border-radius: 15px;
-        }
-        form > h2{
             margin-bottom: 50px;
         }
-        .formulario{
-            margin: 20px;
+        .cent{
+            margin: 10px;
+            text-align: center;
         }
-        .mostrando{
-            margin-top: 50px;
-        }
+        
         .mostrar{
-            margin-top: 150px;
             width: 200px;
-            display: block;
-            height: auto;
+            height: 70px;
             margin: auto;
             border-radius: 5px;
             border: 1px solid #ccc;
-            background: rgb(190, 190, 190);
+            background: rgb(173, 173, 173);
         }
+        .infos{
+            text-align: center;
+        }
+        .inp{
+            margin: 10px;
+            width: 50px;
+        }
+        
+     
     </style>
 </head>
 <body>
@@ -46,39 +52,63 @@
         <form method="POST" action="">
             <h2>Inserir Dados</h2>
             <div class="formulario">
-                <label for="nome">Numero 1:</label>
-                <input type="number" id="num1">
+                <label for="nome">Numero:</label>
+                <input class="inp" type="number" id="num1">
             </div>
             <div class="formulario">
-                <label for="Idade">Numero 2:</label>
-                <input type="number" id="num2">
+                <label for="Idade">Porcentagem:</label>
+                <input class="inp" type="number" id="num2">%
             </div>
-            <div>
-                <button type='submit' id="submitar">Enviar</button>
-            </div>
+            <section >
+                <div class="cent">
+                    <button  type='submit' id="submitar">Enviar</button>
+                    <button  type="reset" id="btnLimpar">Limpar</button>
+                </div>
+            </section>
+            
         </form>
-        <div class="mostrar">
-            <h2>Informações</h2>
-            <p id="num1" class="infos"></p>
-        </div>
     </main>
+    <section class="mostrar">
+        <div>
+            <h2>Informações</h2>
+        </div>
+    </section>
+    <section class="mostrar">
+        <div>
+            <p id="num1" class="infos" id="info"></p>
+        </div>
+    </section>
     <script>
+        let formulario = document.querySelector('form')
         let n1 = document.querySelector('#num1')
         let n2 = document.querySelector('#num2')
         let btn = document.querySelector('#submitar')
+        let btnLimpar = document.querySelector('#btnLimpar')
         let info = document.querySelector('.infos')
+
+        function percent(n1, n2){
+            let res = (n1 * n2)/100
+            return res
+        }
+
 
         btn.addEventListener('click', function(e){
 
-        let num1 = Number(n1.value)
-        let num2 = Number(n2.value)
+        
+        let num1 = parseFloat(n1.value)
+        let num2 = parseFloat(n2.value)
+        
 
 
-        info.textContent = (num1 * num2) / 100
+        info.textContent = percent(num1, num2)
 
         e.preventDefault();
 
 
+        })
+
+        btnLimpar.addEventListener('click', function(){
+            info.textContent = ''
         })
 
 
