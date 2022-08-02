@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcular</title>
     <style>
-        body{
-        }
         h1,h2{
             text-align: center;
         }
@@ -24,8 +22,10 @@
             margin: 10px;
             text-align: center;
         }
-        
-        .mostrar{
+        .corpo{
+            text-align: center;
+        }
+        .informacao{
             width: 200px;
             height: 70px;
             margin: auto;
@@ -33,8 +33,29 @@
             border: 1px solid #ccc;
             background: rgb(173, 173, 173);
         }
+        .mostrarnormal{
+            width: 200px;
+            
+            padding: 20px 0px;
+            margin: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: rgb(173, 173, 173);
+        }
+        .mostraralterado{
+            width: 200px;
+            padding: 20px 0px;
+            margin: auto;
+            border-radius: 5px;
+            border: 1px solid rgb(199, 23, 23);
+            background: rgb(9, 255, 0);
+        }
+        #cx{
+            text-align: center;
+        }
         .infos{
             text-align: center;
+            background-color: rgb(173, 173, 173);
         }
         .inp{
             margin: 10px;
@@ -51,11 +72,11 @@
     <main>
         <form method="POST" action="">
             <h2>Inserir Dados</h2>
-            <div class="formulario">
+            <div class="corpo">
                 <label for="nome">Numero:</label>
                 <input class="inp" type="number" id="num1">
             </div>
-            <div class="formulario">
+            <div class="corpo">
                 <label for="Idade">Porcentagem:</label>
                 <input class="inp" type="number" id="num2">%
             </div>
@@ -68,15 +89,10 @@
             
         </form>
     </main>
-    <section class="mostrar">
-        <div>
+    <section class="informacao">
             <h2>Informações</h2>
-        </div>
     </section>
-    <section class="mostrar">
-        <div>
-            <p id="num1" class="infos" id="info"></p>
-        </div>
+    <section class="mostrarnormal" id="cx">oi
     </section>
     <script>
         let formulario = document.querySelector('form')
@@ -84,7 +100,8 @@
         let n2 = document.querySelector('#num2')
         let btn = document.querySelector('#submitar')
         let btnLimpar = document.querySelector('#btnLimpar')
-        let info = document.querySelector('.infos')
+        let resultado = document.querySelector('#cx')
+        let designres = document.querySelector('#cx')
 
         function percent(n1, n2){
             let res = (n1 * n2)/100
@@ -100,7 +117,10 @@
         
 
 
-        info.textContent = percent(num1, num2)
+        resultado.textContent = percent(num1, num2)
+
+        designres.classList.remove('mostrarnormal')
+        designres.classList.add('mostraralterado')
 
         e.preventDefault();
 
@@ -108,7 +128,9 @@
         })
 
         btnLimpar.addEventListener('click', function(){
-            info.textContent = ''
+            resultado.textContent = 'oi'
+            designres.classList.remove('mostraralterado')
+            designres.classList.add('mostrarnormal')
         })
 
 
