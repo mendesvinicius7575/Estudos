@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+            text-align: center;
+            background-color: cyan;
+
+        }
+        section{
+            text-align: left;
+            background-color: aliceblue;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+
+        }
+        label, input{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+    <section>
+        <div>
+            <label for="inicio">Inicio:</label>
+            <input type="number" id="ini"><br>
+            <label for="pulos">Pulando: </label>
+            <input type="number" id="pul"><br>
+            <label for="fim">Até Número:</label>
+            <input type="number" id="fin">
+        </div>
+        <div>
+            <input type="button" id="checar" value="Checar">
+        </div>
+        <div>
+            <label for="resultado">Resultado:</label>
+            <label for="resp" id="res"></label>
+        </div>
+    </section>
+    <script>
+        let ini = document.querySelector('#ini')
+        let pul = document.querySelector('#pul')
+        let fim = document.querySelector('#fin')
+
+        let res = document.querySelector('#res')
+
+        let check = document.querySelector('#checar')
+
+        
+
+        
+
+
+
+
+       check.addEventListener('click', function(e){
+
+        let cxini = Number(ini.value)
+        let cxPul = Number(pul.value)
+        let cxFim = Number(fim.value)
+
+        
+        res.textContent = cxini
+
+        e.preventDefault()
+
+       })
+
+
+
+    </script>
+</body>
+</html>
