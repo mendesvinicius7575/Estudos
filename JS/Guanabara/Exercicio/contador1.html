@@ -15,6 +15,7 @@
         section{
             text-align: left;
             background-color: aliceblue;
+            border-radius: 15px;
             max-width: 400px;
             margin: auto;
             padding: 20px;
@@ -22,6 +23,9 @@
         }
         label, input{
             margin: 5px;
+        }
+        label#res{
+            font-weight: bold;
         }
     </style>
 </head>
@@ -55,21 +59,46 @@
 
         let check = document.querySelector('#checar')
 
-        
-
-        
-
-
-
-
-       check.addEventListener('click', function(e){
+        check.addEventListener('click', function(e){
 
         let cxini = Number(ini.value)
-        let cxPul = Number(pul.value)
-        let cxFim = Number(fim.value)
+        let cxpul = Number(pul.value)
+        let cxfim = Number(fim.value)
 
+
+        if(cxini < 0 || cxpul < 0 || cxfim < 0){
+
+            alert('Você digitou um numero negativo')
+            ini.value = ''
+            pul.value = ''
+            fim.value = ''
+
+        }else if(cxfim < cxini){
+
+           alert('O Número final é menor que o inicial')
+           ini.value = ''
+           pul.value = ''
+           fim.value = ''
+
+        }else if(ini.value == '' || pul.value == '' || fim.value == ''){
+
+           alert('Faltou digitar algum dado')
+           ini.value = ''
+           pul.value = ''
+           fim.value = ''
+
+        }else{
+
+            var resp = ''
+
+            for(cxini; cxini <= cxfim; cxini += cxpul){
+                resp = resp + `N:${cxini}, `
+            }
         
-        res.textContent = cxini
+            
+        }
+        res.textContent = resp
+        
 
         e.preventDefault()
 
