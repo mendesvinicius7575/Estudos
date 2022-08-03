@@ -1,12 +1,9 @@
-var numDeA = 5;
-let notas = new Array()
-notas = [5,6,8,7,2]
-let cont = 0;
-
-for(var i in notas){
-    cont = cont + notas[i]
+function fat(n){
+    if(n == 1){
+        return 1
+    }else{
+        return n * fat(n-1)
+    }
 }
 
-let media = cont/numDeA
-
-console.log(media)
+console.log(fat(5))

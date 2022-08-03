@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{
+    text-align: center;
+}
+body{
+    background-color: aquamarine;
+}
+section{
+    margin: auto;
+    background-color: aliceblue;
+    height: 500px;
+    max-width: 500px;
+    padding-top: 20px;
+}
+select{
+    margin-top: 20px;
+    width: 200px;
+}
