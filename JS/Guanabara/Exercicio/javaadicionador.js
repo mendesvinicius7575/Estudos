@@ -29,8 +29,8 @@ function adiciona(){
     if(!checarNum(num.value, arr) && testNum(num.value)){
 
         arr.push(Number(num.value))
-        let item = document.createElement('option')
-        item.text = `Valor ${num.value} adicionado`
+        let item = document.createElement('li')
+        item.textContent = `Valor ${num.value} adicionado`
         select.appendChild(item)
         console.log(arr)
 
