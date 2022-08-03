@@ -1,9 +1,12 @@
+var numDeA = 5;
+let notas = new Array()
+notas = [5,6,8,7,2]
+let cont = 0;
 
-
-let arrayNovo = new Array()
-
-arrayNovo = [10,10,45,12,45,78,78]
-
-for(var e in arrayNovo){
-    console.log(`oi de numero ${e} correspondente ao Conteúdo ${arrayNovo[e]}`)
+for(var i in notas){
+    cont = cont + notas[i]
 }
+
+let media = cont/numDeA
+
+console.log(media)
