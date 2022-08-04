@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button id="btn">Aparecer</button>
+        <h1>Mensagem</h1>
+        <span id="resp"></span>
+        <button id="apaga">Apagar</button>
+    </main>
+    <script>
+        async function getContent(){
+
+            try {
+                const resposta = await fetch('http://localhost:4567/')
+                const data = await resposta.json()
+                show(data)
+            } catch (error) {
+                console.log(error)
+            }
+            
+        }
+
+
+        function show(users){
+            let output = ''
+            for(let user of users){
+                output += `<li>Nomes: ${user.name}</li>`
+            }
+            output += `<br>`
+            document.querySelector('#resp').innerHTML = output
+        }
+
+        let bt = document.querySelector('#btn')
+        let apaga = document.querySelector('#apaga')
+
+
+
+        bt.addEventListener('click', function(e){
+
+            getContent();
+
+            e.preventDefault();
+        })
+
+        apaga.addEventListener('click', function(e){
+
+        document.querySelector('#resp').innerHTML = ""
+
+        e.preventDefault();
+        })
+
+        
+    </script>
+</body>
+</html>
