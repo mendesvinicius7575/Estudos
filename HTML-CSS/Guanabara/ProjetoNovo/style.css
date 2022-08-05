@@ -36,18 +36,37 @@ section{
     padding-bottom: 10vh;
     font-size: 2.56vw;
 }
+section > p{
+    padding-bottom: 1em;
+}
 section.normal > p{
-    background-color: rgba(0, 0, 0, 0.267);
-    display: inline-block;
+   
+    
     padding: 20px;
 }
 section.image > p{
-    display: inline-block;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.726);
+    display: inline-block;
+    color: aliceblue;
 }
 section.normal{
     background-color: aqua;
 }
 section.image{
     background-color: blueviolet;
+    
+    
+}
+section#img01{
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section#img02{
+    background-image: url('imagens/background002.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
 }
