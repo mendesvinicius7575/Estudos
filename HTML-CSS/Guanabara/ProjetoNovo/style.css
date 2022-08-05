@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
+
+@font-face{
+    font-family: 'cin';
+    src: url('Cinzel-Regular.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --font1: 'cin';
+}
+
 *{
+    font: bold normal 1em var(--font1), 'verdana';
     margin: 0px;
     padding: 0px;
 }
@@ -11,13 +24,26 @@ html,body{
 }
 
 header{
-
+    text-align: center;
     background-color: rgb(0, 0, 0);
     color: aliceblue;
+}
+header > h1{
+    font-size: 5vw;
 }
 section{
     padding-top: 10vh;
     padding-bottom: 10vh;
+    font-size: 2.56vw;
+}
+section.normal > p{
+    background-color: rgba(0, 0, 0, 0.267);
+    display: inline-block;
+    padding: 20px;
+}
+section.image > p{
+    display: inline-block;
+    padding: 20px;
 }
 section.normal{
     background-color: aqua;
