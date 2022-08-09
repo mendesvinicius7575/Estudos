@@ -7,18 +7,23 @@
     <title>Document</title>
     <style>
         table{
-            width: 200px;
+            width: 400px;
+            height: 400px;
             border-collapse: collapse;
         }
         td{
             border: 1px solid black;
             padding: 5px;
+            vertical-align: middle;
         }
         tr{
             text-align: center;
         }
         tr.linha{
             background-color: rgba(0, 0, 0, 0.349);
+        }
+        td.numero{
+            text-align: right;
         }
     </style>
 </head>
@@ -31,7 +36,7 @@
             <td>A3</td>
         </tr>
         <tr>
-            <td>B1</td>
+            <td class="numero">B1</td>
             <td>B2</td>
             <td>B3</td>
         </tr>
