@@ -20,6 +20,9 @@ const listaDois = [
 
 ];
 
+
+listaDois.push({nome: "Roberval", posicao: "Lutador"})
+
 for(let cont in listaDois){
     console.log("Nome: " + listaDois[cont].nome + " E Ocupação: " + listaDois[cont].posicao)
 }
