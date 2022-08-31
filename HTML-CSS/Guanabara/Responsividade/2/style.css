@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 62.5%;
+}
+body{
+    background-color: aquamarine;
+}
+.container{
+}
+header{
+    background-color: rgb(110, 97, 79);
+}
+.topo{
+    margin: auto;
+    position: relative;
+    width: 90%;
+    max-width: 980px;
+    height: 100px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-size: 3rem;
+}
+li{
+    margin: 0px 5px 0px 5px;
+}
+
